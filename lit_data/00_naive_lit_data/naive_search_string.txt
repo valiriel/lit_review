@@ -1,0 +1,4 @@
+("extinction debt*" OR "species credit*" OR "colonization credit*" OR "colonisation credit*" OR 
+  "immigration credit*" OR "ecosystem function debt*" OR "ecosystem service debt*" OR 
+  "ecosystem function credit*" OR "ecosystem service credit*" OR "ecological lags*" OR 
+  "biodiversity lag*" OR "species lags" OR "landscape legacy")
