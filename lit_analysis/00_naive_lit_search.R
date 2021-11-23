@@ -19,7 +19,7 @@ write_file(naive_search_string, file = "lit_data/naive_lit_data/naive_search_str
 #######################################################################################
 
 #' import naive search and remove duplicates
-naive_import <- import_results(directory = "lit_data/naive_search_data", verbose = TRUE)
+naive_import <- import_results(directory = "lit_data/00_naive_lit_data/naive_search_data", verbose = TRUE)
 print(paste0("imported n. ", nrow(naive_import)))
 
 naive_deduplicated <- remove_duplicates(naive_import, field = "title", method = "exact")
@@ -34,11 +34,11 @@ rake_keywords <- extract_terms(text = paste(naive_deduplicated$title, naive_dedu
                                language = "English", stopwords = get_stopwords("English")) %>% as_tibble()
 
 # remove terms that are too broad, save to csv (ver1) and then save for re-import (ver2)
-write.csv(rake_keywords, file = "lit_data/naive_lit_data/naive_search_keywords_ver1.csv")
+write.csv(rake_keywords, file = "lit_data/00_naive_lit_data/naive_search_keywords_ver1.csv")
 
 #' obsolete or too broad terms manually removed, such as keywords related to specific 
 #' habitat or taxonomic groups, broad words ("biodiversity", population size) and unrelated connecting words
-rake_keywords <- read.csv("lit_data/naive_lit_data/naive_search_keywords_ver2.csv")[,-1]
+rake_keywords <- read.csv("lit_data/00_naive_lit_data/naive_search_keywords_ver2.csv")[,-1]
 
 #' create document-feature matrix
 naive_dfm <- create_dfm(elements = paste(naive_deduplicated$title, naive_deduplicated$abstract),

@@ -37,6 +37,8 @@ table(data2$screened_abstracts)
 table(data2$source_type)
 table(data2$year)
 
+data2 <- data2 %>% filter(source_type == "JOUR")
+
 plot(names(table(data2$year)), as.numeric(table(data2$year)), type="l")
 
 #' Go through each article and import into in reference manager for reading

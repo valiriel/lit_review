@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='svglite' width='566.93pt' height='283.46pt' viewBox='0 0 566.93 283.46'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: none;'/>
+<defs>
+  <clipPath id='cpMC4wMHw1NjYuOTN8MC4wMHwyODMuNDY='>
+    <rect x='0.00' y='0.00' width='566.93' height='283.46' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw1NjYuOTN8MC4wMHwyODMuNDY=)'>
+</g>
+<defs>
+  <clipPath id='cpMzMuMTR8NDU5LjAzfDUuNDh8MjUxLjk3'>
+    <rect x='33.14' y='5.48' width='425.89' height='246.49' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMzMuMTR8NDU5LjAzfDUuNDh8MjUxLjk3)'>
+<polyline points='33.14,197.67 459.03,197.67 ' style='stroke-width: 0.53; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='33.14,111.49 459.03,111.49 ' style='stroke-width: 0.53; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='33.14,25.30 459.03,25.30 ' style='stroke-width: 0.53; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='33.14,240.76 459.03,240.76 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='33.14,154.58 459.03,154.58 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='33.14,68.39 459.03,68.39 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='149.29,251.97 149.29,5.48 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='342.88,251.97 342.88,5.48 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
+<rect x='62.18' y='68.39' width='174.23' height='172.37' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #4E79A7;' />
+<rect x='255.76' y='16.68' width='174.23' height='224.08' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #F28E2B;' />
+</g>
+<g clip-path='url(#cpMC4wMHw1NjYuOTN8MC4wMHwyODMuNDY=)'>
+<text x='28.21' y='243.91' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Arial;' textLength='4.90px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='28.21' y='157.73' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Arial;' textLength='9.79px' lengthAdjust='spacingAndGlyphs'>10</text>
+<text x='28.21' y='71.54' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Arial;' textLength='9.79px' lengthAdjust='spacingAndGlyphs'>20</text>
+<text x='149.29' y='263.20' text-anchor='middle' style='font-size: 8.80px; fill: #4D4D4D; font-family: Arial;' textLength='43.06px' lengthAdjust='spacingAndGlyphs'>considered</text>
+<text x='342.88' y='263.20' text-anchor='middle' style='font-size: 8.80px; fill: #4D4D4D; font-family: Arial;' textLength='57.74px' lengthAdjust='spacingAndGlyphs'>not considered</text>
+<text x='246.08' y='275.67' text-anchor='middle' style='font-size: 11.00px; font-family: Arial;' textLength='68.51px' lengthAdjust='spacingAndGlyphs'>response_flex</text>
+<text transform='translate(13.36,128.72) rotate(-90)' text-anchor='middle' style='font-size: 11.00px; font-family: Arial;' textLength='26.92px' lengthAdjust='spacingAndGlyphs'>count</text>
+<text x='475.47' y='112.64' style='font-size: 11.00px; font-family: Arial;' textLength='68.51px' lengthAdjust='spacingAndGlyphs'>response_flex</text>
+<rect x='476.18' y='119.99' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #4E79A7;' />
+<rect x='476.18' y='137.27' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #F28E2B;' />
+<text x='498.23' y='131.07' style='font-size: 8.80px; font-family: Arial;' textLength='43.06px' lengthAdjust='spacingAndGlyphs'>considered</text>
+<text x='498.23' y='148.35' style='font-size: 8.80px; font-family: Arial;' textLength='57.74px' lengthAdjust='spacingAndGlyphs'>not considered</text>
+</g>
+</svg>
