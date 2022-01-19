@@ -11,58 +11,55 @@
     }
   ]]></style>
 </defs>
-<rect width='100%' height='100%' style='stroke: none; fill: none;'/>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
 <defs>
   <clipPath id='cpMC4wMHw1NjYuOTN8MC4wMHwyODMuNDY='>
     <rect x='0.00' y='0.00' width='566.93' height='283.46' />
   </clipPath>
 </defs>
 <g clip-path='url(#cpMC4wMHw1NjYuOTN8MC4wMHwyODMuNDY=)'>
+<rect x='0.00' y='0.00' width='566.93' height='283.46' style='stroke-width: 1.16; stroke: #FFFFFF; fill: #FFFFFF;' />
 </g>
 <defs>
-  <clipPath id='cpMzMuMTR8NDQ2LjU2fDUuNDh8MjUxLjk3'>
-    <rect x='33.14' y='5.48' width='413.42' height='246.49' />
+  <clipPath id='cpMzUuNDd8NTYwLjk1fDUuOTh8MjQ5LjY3'>
+    <rect x='35.47' y='5.98' width='525.48' height='243.69' />
   </clipPath>
 </defs>
-<g clip-path='url(#cpMzMuMTR8NDQ2LjU2fDUuNDh8MjUxLjk3)'>
-<polyline points='33.14,199.27 446.56,199.27 ' style='stroke-width: 0.53; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='33.14,116.27 446.56,116.27 ' style='stroke-width: 0.53; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='33.14,33.28 446.56,33.28 ' style='stroke-width: 0.53; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='33.14,240.76 446.56,240.76 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='33.14,157.77 446.56,157.77 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='33.14,74.78 446.56,74.78 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='80.84,251.97 80.84,5.48 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='160.34,251.97 160.34,5.48 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='239.85,251.97 239.85,5.48 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='319.35,251.97 319.35,5.48 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='398.86,251.97 398.86,5.48 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
-<rect x='45.06' y='232.46' width='71.55' height='8.30' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #2C194C;' />
-<rect x='124.57' y='232.46' width='71.55' height='8.30' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #5B82A8;' />
-<rect x='204.07' y='224.17' width='71.55' height='16.60' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #E6EEEC;' />
-<rect x='283.58' y='99.68' width='71.55' height='141.09' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #6BA870;' />
-<rect x='363.08' y='16.68' width='71.55' height='224.08' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #434C01;' />
+<g clip-path='url(#cpMzUuNDd8NTYwLjk1fDUuOTh8MjQ5LjY3)'>
+<polyline points='35.47,238.59 560.95,238.59 ' style='stroke-width: 0.21; stroke: #7F7F7F; stroke-dasharray: 1.00,3.00; stroke-linecap: butt;' />
+<polyline points='35.47,156.54 560.95,156.54 ' style='stroke-width: 0.21; stroke: #7F7F7F; stroke-dasharray: 1.00,3.00; stroke-linecap: butt;' />
+<polyline points='35.47,74.49 560.95,74.49 ' style='stroke-width: 0.21; stroke: #7F7F7F; stroke-dasharray: 1.00,3.00; stroke-linecap: butt;' />
+<polyline points='96.10,249.67 96.10,5.98 ' style='stroke-width: 0.21; stroke: #7F7F7F; stroke-dasharray: 1.00,3.00; stroke-linecap: butt;' />
+<polyline points='197.16,249.67 197.16,5.98 ' style='stroke-width: 0.21; stroke: #7F7F7F; stroke-dasharray: 1.00,3.00; stroke-linecap: butt;' />
+<polyline points='298.21,249.67 298.21,5.98 ' style='stroke-width: 0.21; stroke: #7F7F7F; stroke-dasharray: 1.00,3.00; stroke-linecap: butt;' />
+<polyline points='399.27,249.67 399.27,5.98 ' style='stroke-width: 0.21; stroke: #7F7F7F; stroke-dasharray: 1.00,3.00; stroke-linecap: butt;' />
+<polyline points='500.32,249.67 500.32,5.98 ' style='stroke-width: 0.21; stroke: #7F7F7F; stroke-dasharray: 1.00,3.00; stroke-linecap: butt;' />
+<rect x='50.63' y='230.39' width='90.95' height='8.21' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #2C194C;' />
+<rect x='151.68' y='230.39' width='90.95' height='8.21' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #5B82A8;' />
+<rect x='252.74' y='222.18' width='90.95' height='16.41' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #E6EEEC;' />
+<rect x='353.79' y='99.11' width='90.95' height='139.49' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #6BA870;' />
+<rect x='454.84' y='17.05' width='90.95' height='221.54' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #434C01;' />
 </g>
 <g clip-path='url(#cpMC4wMHw1NjYuOTN8MC4wMHwyODMuNDY=)'>
-<text x='28.21' y='243.91' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Arial;' textLength='4.90px' lengthAdjust='spacingAndGlyphs'>0</text>
-<text x='28.21' y='160.92' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Arial;' textLength='9.79px' lengthAdjust='spacingAndGlyphs'>10</text>
-<text x='28.21' y='77.93' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Arial;' textLength='9.79px' lengthAdjust='spacingAndGlyphs'>20</text>
-<text x='80.84' y='263.20' text-anchor='middle' style='font-size: 8.80px; fill: #4D4D4D; font-family: Arial;' textLength='8.80px' lengthAdjust='spacingAndGlyphs'>all</text>
-<text x='160.34' y='263.20' text-anchor='middle' style='font-size: 8.80px; fill: #4D4D4D; font-family: Arial;' textLength='32.28px' lengthAdjust='spacingAndGlyphs'>Bacteria</text>
-<text x='239.85' y='263.20' text-anchor='middle' style='font-size: 8.80px; fill: #4D4D4D; font-family: Arial;' textLength='22.01px' lengthAdjust='spacingAndGlyphs'>Fungi</text>
-<text x='319.35' y='263.20' text-anchor='middle' style='font-size: 8.80px; fill: #4D4D4D; font-family: Arial;' textLength='33.74px' lengthAdjust='spacingAndGlyphs'>Animalia</text>
-<text x='398.86' y='263.20' text-anchor='middle' style='font-size: 8.80px; fill: #4D4D4D; font-family: Arial;' textLength='29.85px' lengthAdjust='spacingAndGlyphs'>Plantae</text>
-<text x='239.85' y='275.67' text-anchor='middle' style='font-size: 11.00px; font-family: Arial;' textLength='92.97px' lengthAdjust='spacingAndGlyphs'>response_kingdom</text>
-<text transform='translate(13.36,128.72) rotate(-90)' text-anchor='middle' style='font-size: 11.00px; font-family: Arial;' textLength='26.92px' lengthAdjust='spacingAndGlyphs'>count</text>
-<text x='463.00' y='86.72' style='font-size: 11.00px; font-family: Arial;' textLength='92.97px' lengthAdjust='spacingAndGlyphs'>response_kingdom</text>
-<rect x='463.71' y='94.07' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #2C194C;' />
-<rect x='463.71' y='111.35' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #5B82A8;' />
-<rect x='463.71' y='128.63' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #E6EEEC;' />
-<rect x='463.71' y='145.91' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #6BA870;' />
-<rect x='463.71' y='163.19' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #434C01;' />
-<text x='485.76' y='105.15' style='font-size: 8.80px; font-family: Arial;' textLength='8.80px' lengthAdjust='spacingAndGlyphs'>all</text>
-<text x='485.76' y='122.43' style='font-size: 8.80px; font-family: Arial;' textLength='32.28px' lengthAdjust='spacingAndGlyphs'>Bacteria</text>
-<text x='485.76' y='139.71' style='font-size: 8.80px; font-family: Arial;' textLength='22.01px' lengthAdjust='spacingAndGlyphs'>Fungi</text>
-<text x='485.76' y='156.99' style='font-size: 8.80px; font-family: Arial;' textLength='33.74px' lengthAdjust='spacingAndGlyphs'>Animalia</text>
-<text x='485.76' y='174.27' style='font-size: 8.80px; font-family: Arial;' textLength='29.85px' lengthAdjust='spacingAndGlyphs'>Plantae</text>
+<polyline points='35.47,249.67 35.47,5.98 ' style='stroke-width: 1.07; stroke-linecap: butt;' />
+<text x='30.09' y='241.82' text-anchor='end' style='font-size: 9.00px; font-family: Arial;' textLength='5.00px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='30.09' y='159.76' text-anchor='end' style='font-size: 9.00px; font-family: Arial;' textLength='10.01px' lengthAdjust='spacingAndGlyphs'>10</text>
+<text x='30.09' y='77.71' text-anchor='end' style='font-size: 9.00px; font-family: Arial;' textLength='10.01px' lengthAdjust='spacingAndGlyphs'>20</text>
+<polyline points='32.48,238.59 35.47,238.59 ' style='stroke-width: 1.16; stroke-linecap: butt;' />
+<polyline points='32.48,156.54 35.47,156.54 ' style='stroke-width: 1.16; stroke-linecap: butt;' />
+<polyline points='32.48,74.49 35.47,74.49 ' style='stroke-width: 1.16; stroke-linecap: butt;' />
+<polyline points='35.47,249.67 560.95,249.67 ' style='stroke-width: 1.07; stroke-linecap: butt;' />
+<polyline points='96.10,252.66 96.10,249.67 ' style='stroke-width: 1.16; stroke-linecap: butt;' />
+<polyline points='197.16,252.66 197.16,249.67 ' style='stroke-width: 1.16; stroke-linecap: butt;' />
+<polyline points='298.21,252.66 298.21,249.67 ' style='stroke-width: 1.16; stroke-linecap: butt;' />
+<polyline points='399.27,252.66 399.27,249.67 ' style='stroke-width: 1.16; stroke-linecap: butt;' />
+<polyline points='500.32,252.66 500.32,249.67 ' style='stroke-width: 1.16; stroke-linecap: butt;' />
+<text x='96.10' y='261.49' text-anchor='middle' style='font-size: 9.00px; font-family: Arial;' textLength='9.01px' lengthAdjust='spacingAndGlyphs'>all</text>
+<text x='197.16' y='261.49' text-anchor='middle' style='font-size: 9.00px; font-family: Arial;' textLength='33.01px' lengthAdjust='spacingAndGlyphs'>Bacteria</text>
+<text x='298.21' y='261.49' text-anchor='middle' style='font-size: 9.00px; font-family: Arial;' textLength='22.51px' lengthAdjust='spacingAndGlyphs'>Fungi</text>
+<text x='399.27' y='261.49' text-anchor='middle' style='font-size: 9.00px; font-family: Arial;' textLength='34.52px' lengthAdjust='spacingAndGlyphs'>Animalia</text>
+<text x='500.32' y='261.49' text-anchor='middle' style='font-size: 9.00px; font-family: Arial;' textLength='30.52px' lengthAdjust='spacingAndGlyphs'>Plantae</text>
+<text x='298.21' y='274.97' text-anchor='middle' style='font-size: 12.00px; font-family: Arial;' textLength='106.07px' lengthAdjust='spacingAndGlyphs'>Taxonomic kingdom</text>
+<text transform='translate(14.57,127.82) rotate(-90)' text-anchor='middle' style='font-size: 12.00px; font-family: Arial;' textLength='32.03px' lengthAdjust='spacingAndGlyphs'>Count</text>
 </g>
 </svg>

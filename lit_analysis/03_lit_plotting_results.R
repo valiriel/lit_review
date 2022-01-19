@@ -1,4 +1,13 @@
-library(tidyverse); library(ggthemes); options(tibble.print_max = 50); library(viridis); library(scico); library(knitr); library(kableExtra)
+library(tidyverse); library(ggthemes); options(tibble.print_max = 50); library(viridis); library(scico); library(knitr); library(kableExtra); library(flextable)
+theme <- theme_clean() + 
+  theme(axis.title=element_text(size=12), axis.text=element_text(size=9),
+        legend.text=element_text(size=9), legend.title=element_text(size=11), 
+        plot.background = element_rect(color = "white"), 
+        panel.border= element_blank(), plot.title=element_text(size=14),
+        panel.grid.major.y = element_line(size=0.1, linetype = "dotted", colour = "grey50"),  
+        panel.grid.major.x = element_line(size=0.1, linetype = "dotted", colour = "grey50"),
+        legend.background = element_rect(color = NA),
+        strip.background.y = element_rect(color = "grey30"))
 
 data <- read.csv("lit_data/lit_database_last_4_years_v2.csv")
 #all_data <- read.csv("lit_data/lit_database_base.csv")
@@ -7,16 +16,46 @@ data <- read.csv("lit_data/lit_database_last_4_years_v2.csv")
 data <- as_tibble(data) %>% select(-landscape_var, - change_regime, - change_magnitude, 
                                    -change_pace, -study_spatial_area_km2, -study_temporal_scale_year,
                                    -delay_magnitude, -relaxation_time_years)
+
+#'--------------
+#' *Collected variables table for supplementary*
+
+table <- flextable(tibble(category = names(data), description = ""))
+table <- flextable::theme_vanilla(table)
+save_as_docx(table, path="lit_output/tables/var_table.docx")
+
+#'--------------
+#' *All data table for supplementary*
+
+table <- data %>% select(year, label, title, journal, author, doi, research_type, continent, country,
+                         data_type, response_level, response_var, response_kingdom, response_phylum,
+                         response_flex, landscape_group, landscape_type, change_category, study_spatial_scale, 
+                         method, delay_type, delay_quantified, what_quantified, delay_direction)
+
+table <- flextable(tibble(table, description = ""))
+table <- flextable::theme_vanilla(table)
+save_as_docx(table, path="lit_output/tables/data_table.docx")
+
 #'--------------
 #' *years*
 
-table <- data %>% group_by(year) %>% summarise(n = n(), ratio = round(n()/nrow(data),2)); names(table)[1] <- "year"
+table <- data %>% group_by(year) %>% summarise(n = n(), ratio = round(n()/nrow(data),2)); names(table)[1] <- "year"; table
 kable(table, "html") %>% kable_styling("striped", font_size = 30, full_width = F, htmltable_class = 'lightable-classic-2') %>% 
   save_kable(file="lit_output/figures/year_table.pdf", bs_theme = "flatly")
 
-ggplot(table, aes(x=year, y=n)) + geom_line(size=2) + theme_minimal() +
-  scale_y_continuous(limits = c(0, 20)) + labs(y="Publications per year", x="Year")
-ggsave(file = "lit_output/figures/year.svg", units = "cm", dpi = "retina", width =12, height = 10)
+sd(table$n)
+
+# plot including all years data, split on last 4 years
+
+year_data <- readxl::read_xlsx("lit_data/lit_database_all_v1.xlsx") %>% select(year)
+table <- year_data %>% group_by(year) %>% summarise(n = n(), ratio = round(n()/nrow(data),2)); table <- na.omit(table)
+ggplot(table, aes(x=year, y=n)) + theme +
+  scale_y_continuous(limits = c(0, 28)) + labs(y="Publications per year", x="Year") + 
+  scale_x_continuous(limits = c(1994, 2021), breaks = c(seq(1994, 2021, 3))) + 
+  geom_line(size=0.5) +
+  geom_line(data=table%>%filter(year>2017),size=1) + 
+  geom_vline(xintercept=2018)
+ggsave(file = "lit_output/figures/year.svg", units = "cm", dpi = "retina", width =20, height = 10)
 
 #'--------------
 #' *journal*
@@ -28,9 +67,10 @@ table; journal$value <- factor(journal$value, levels = table$value); names(table
 kable(table, "html") %>% kable_styling("striped", font_size = 30, full_width = F, htmltable_class = 'lightable-classic-2') %>% 
   save_kable(file="lit_output/figures/journal_table.pdf", bs_theme = "flatly")
 
-ggplot(journal, aes(x=value, fill=value)) + labs(x="journal", fill= "journal") + 
-  geom_bar() + theme_minimal() + theme(axis.text.x=element_blank())
+ggplot(journal, aes(x=value, fill=value)) + labs(x="journal", fill= "journal") + theme +
+  geom_bar() + theme_minimal() + theme(axis.text.x=element_blank()) + labs(x="Journals on which publications appeared", y = "Count", fill="")
 ggsave(file = "lit_output/figures/journal.svg", units = "cm", dpi = "retina", width =27, height = 21)
+ggsave(file = "lit_output/figures/journal.png", units = "cm", dpi = "retina", width =27, height = 21)
 
 #'--------------
 #' *research_type*
@@ -57,7 +97,9 @@ kable(table, "html") %>% kable_styling("striped", font_size = 30, full_width = F
   save_kable(file="lit_output/figures/continent_table.pdf", bs_theme = "flatly")
 
 ggplot(continent, aes(x=value, fill=value)) + labs(x="continent", fill= "continent") + 
-  geom_bar() + theme_minimal() + scale_fill_solarized() + theme(axis.text.x=element_blank())
+  geom_bar() + theme + scale_fill_solarized() + theme(axis.text.x=element_blank()) + 
+  labs(fill="Continents", x="", y="Count")
+  
 ggsave(file = "lit_output/figures/continent.svg", units = "cm", dpi = "retina", width =20, height = 10)
 
 #'--------------
@@ -73,6 +115,17 @@ kable(table, "html") %>% kable_styling("striped", font_size = 30, full_width = F
 ggplot(country, aes(x=value, fill=value)) + labs(x="country", fill= "country") +  
   geom_bar() + theme_minimal() + scale_fill_scico_d(palette = 'roma') + theme(axis.text.x=element_blank())
 ggsave(file = "lit_output/figures/country.svg", units = "cm", dpi = "retina", width =20, height = 10)
+
+library(sf); countries <- read_sf("lit_output/figures/countries_shp/simple_country_shp.shp")
+names(table)[1] <- names(countries)[5]; table$NAME[table$NAME=="USA"] <- "United States"
+
+countries <- left_join(countries, table, by=names(countries)[5])
+countries$n[is.na(countries$n)] <- 0
+countries$NAME
+
+ggplot(countries, aes(fill=n)) + geom_sf() + theme + theme(legend.position="bottom") + scale_fill_viridis() + labs(fill="No. of studies per country")
+ggsave(file = "lit_output/figures/country_map.svg", units = "cm", dpi = "retina", width =40, height = 20)
+ggsave(file = "lit_output/figures/country_map.png", units = "cm", dpi = "retina", width =40, height = 20)
 
 #'--------------
 #' *data_type*
@@ -119,7 +172,6 @@ ggplot(response_var, aes(x=value, fill=value)) + labs(x="response_var", fill= "r
   geom_bar() + theme_minimal() + scale_fill_scico_d(palette = 'berlin')
 ggsave(file = "lit_output/figures/response_var.svg", units = "cm", dpi = "retina", width =40, height = 20)
 
-
 #'--------------
 #' *response_kingdom*
 
@@ -131,8 +183,10 @@ kable(table, "html") %>% kable_styling("striped", font_size = 30, full_width = F
   save_kable(file="lit_output/figures/response_kingdom_table.pdf", bs_theme = "flatly")
 
 ggplot(response_kingdom, aes(x=value, fill=value)) + labs(x="response_kingdom", fill= "response_kingdom") +  
-  geom_bar() + theme_minimal() + scale_fill_scico_d(palette = 'cork')
+  geom_bar() + theme + scale_fill_scico_d(palette = 'cork') + theme(legend.position="none") + 
+  labs(y="Count", x="Taxonomic kingdom")
 ggsave(file = "lit_output/figures/response_kingdom.svg", units = "cm", dpi = "retina", width =20, height = 10)
+ggsave(file = "lit_output/figures/response_kingdom.png", units = "cm", dpi = "retina", width =20, height = 10)
 
 #'--------------
 #' *response_phylum*
@@ -145,10 +199,12 @@ kable(table, "html") %>% kable_styling("striped", font_size = 30, full_width = F
   save_kable(file="lit_output/figures/response_phylum_table.pdf", bs_theme = "flatly")
 
 ggplot(response_phylum, aes(x=value, fill=value)) + labs(x="response_phylum", fill= "response_phylum") +  
-  geom_bar() + theme_minimal() + scale_fill_viridis_d(option="E") + theme(axis.text.x=element_blank())
+  geom_bar() + theme + scale_fill_viridis_d(option="D") + theme(axis.text.x=element_blank()) + 
+  labs(y="Count", fill="Broader animal groups", x="")
 ggsave(file = "lit_output/figures/response_phylum.svg", units = "cm", dpi = "retina", width =20, height = 10)
+ggsave(file = "lit_output/figures/response_phylum.png", units = "cm", dpi = "retina", width =20, height = 10)
 
-#'--------------
+  #'--------------
 #' *response_flex*
 
 response_flex <- as_tibble(unlist(stringr::str_split(data$response_flex, "; "))) %>% filter(value != "NA")
@@ -187,8 +243,10 @@ kable(table, "html") %>% kable_styling("striped", font_size = 30, full_width = F
   save_kable(file="lit_output/figures/landscape_type_table.pdf", bs_theme = "flatly")
 
 ggplot(landscape_type, aes(x=value, fill=value)) + labs(x="landscape_type", fill= "landscape_type") + 
-  geom_bar() + theme_minimal() + scale_fill_viridis_d(option = "D")  + theme(axis.text.x=element_blank())
+  geom_bar() + theme + scale_fill_viridis_d(option = "D")  + theme(axis.text.x=element_blank()) + 
+  labs(x="", y="Count", fill="Landscape categories")
 ggsave(file = "lit_output/figures/landscape_type.svg", units = "cm", dpi = "retina", width =20, height = 10)
+ggsave(file = "lit_output/figures/landscape_type.png", units = "cm", dpi = "retina", width =20, height = 10)
 
 #'--------------
 #' *change_category*
@@ -286,3 +344,8 @@ kable(table, "html") %>% kable_styling("striped", font_size = 30, full_width = F
 ggplot(mark, aes(x=value, fill=value)) + 
   geom_bar() + theme_minimal() + scale_fill_wsj() + theme(legend.position = "none") + labs(x="mark")
 ggsave(file = "lit_output/figures/mark.svg", units = "cm", dpi = "retina", width =15, height = 10)
+
+#'--------------
+#' *marking*
+
+quantified <- data %>% filter(delay_quantified == "yes")

@@ -40,9 +40,7 @@ data <- arrange(lit, year) %>%
             delay_type = NA, # specific term
             delay_magnitude = NA, # percentage of response to be lost/gained
             relaxation_time = NA, # timeframe to equilibrium/delay repayment
-            
-            
-            
+
             )
 
 write.csv(data, "lit_data/lit_database_raw_v0.csv", row.names = F)
